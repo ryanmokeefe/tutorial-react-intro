@@ -1,0 +1,52 @@
+{{bottles}} bottles of beer on the wall.
+{{#if next}}
+  <a href='/{{next}}'>Take One Down, Pass it Around</a>
+{{else}}
+  <a href='/'>Start Over</a>
+{{/if}}
+
+{{!-- /////// --}}
+
+<!doctype html>
+    <html>
+        <head>
+            <title>
+                {{#if title}}
+                    {{title}}
+                {{else}}
+                    Compliment Express
+                {{/if}}
+            </title>
+            <link rel="stylesheets" href="main.css">
+            {{#> head-block}}
+            {{!-- custom <head> content per page could be added here --}}
+            {{/head-block}}
+        </head>
+        <body>
+            {{#> hero-block}}
+                {{!-- hero content --}}
+            {{/hero-block}}
+
+            <footer>
+                {{#> footer-block}}
+                    {{!-- 
+                    'includes/footer' partial is the default content, but can be overridden.
+                     --}}
+                {{/footer-block}}
+            </footer>
+
+            {{#> scripts-block}}
+                {{!-- custom scripts per page can be added here --}}
+            {{/scripts-block}}
+
+        </body>
+</html>
+
+
+
+ function ran_col() { //function name
+                var color = '#'; // hexadecimal starting symbol
+                var letters = ['000000','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0']; //Set your colors here
+                color += letters[Math.floor(Math.random() * letters.length)];
+                document.getElementById('posts').style.background = color; // Setting the random color on your div element.
+            }

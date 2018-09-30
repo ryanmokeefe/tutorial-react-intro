@@ -1,0 +1,18 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>
+                {{#if title}}
+                    {{title}}
+                {{else}}
+                    Intro to Express
+                {{/if}}
+            </title>
+            <link rel="stylesheets" href="main.css">
+            {{#> head-block}}
+            {{/head-block}}
+        </head>
+        <body>
+          {{{body}}}
+        </body>
+</html>
